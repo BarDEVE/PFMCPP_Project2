@@ -222,7 +222,7 @@ float findMinimum(float num1, float num2)
 int main() {
   // example of calling that function, storing the value, and passing it to
   // ignoreUnused at the end of main()
-  auto carRented = rentACar(6, 2);
+    auto carRented = rentACar(6, 2);
 
     // 1)
     auto rectangleArea = calculateRectangleArea(4.2, 7.8);
@@ -257,7 +257,7 @@ int main() {
     
 
   
-  ignoreUnused(carRented);
+    ignoreUnused(carRented);
     ignoreUnused(rectangleArea);
     ignoreUnused(boxVolume);
     ignoreUnused(celsiusValue);
