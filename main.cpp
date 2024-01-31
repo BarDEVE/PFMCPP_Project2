@@ -73,8 +73,7 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
 // 2)
 void variableDeclarations() {
   // example:
-  int number =
-      2; // declaration of a variable named "number", that uses the primitive
+  //int number = 2; // declaration of a variable named "number", that uses the primitive
          // type 'int', and the variable's initial value is '2'
 
     // Integer type
@@ -98,20 +97,23 @@ void variableDeclarations() {
     bool isFlag = true;
 
 
-  ignoreUnused(number); // passing each variable declared to the ignoreUnused() function
+  // ignoreUnused(number); // passing each variable declared to the ignoreUnused() function
 
-    ignoreUnused(myInt);
-    ignoreUnused(anotherInt);
-    ignoreUnused(thirdInt);
-    ignoreUnused(myFloat);
-    ignoreUnused(anotherFloat);
-    ignoreUnused(thirdFloat);
-    ignoreUnused(myDouble);
-    ignoreUnused(anotherDouble);
-    ignoreUnused(thirdDouble);
-    ignoreUnused(isTrue);
-    ignoreUnused(isFalse);
-    ignoreUnused(isFlag);
+  //   ignoreUnused(myInt);
+  //   ignoreUnused(anotherInt);
+  //   ignoreUnused(thirdInt);
+  //   ignoreUnused(myFloat);
+  //   ignoreUnused(anotherFloat);
+  //   ignoreUnused(thirdFloat);
+  //   ignoreUnused(myDouble);
+  //   ignoreUnused(anotherDouble);
+  //   ignoreUnused(thirdDouble);
+  //   ignoreUnused(isTrue);
+  //   ignoreUnused(isFalse);
+  //   ignoreUnused(isFlag);
+
+    ignoreUnused(myInt, anotherInt, thirdInt, myFloat, anotherFloat, thirdFloat, myDouble, anotherDouble, thirdDouble, isTrue, isFalse, isFlag);
+    
 }
 
 /*
@@ -119,15 +121,13 @@ void variableDeclarations() {
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(
-    int rentalDuration,
-    int carType = 0) // function declaration with random number of arguments,
+bool rentACar(int rentalDuration, int carType = 0) // function declaration with random number of arguments,
                      // arbitrary number of arguments have default value
 
 {
-  ignoreUnused(rentalDuration, carType); // passing each function parameter to
+    ignoreUnused(rentalDuration, carType); // passing each function parameter to
                                          // the ignoreUnused() function
-  return {}; // if your function returns something other than void, add 'return
+    return {}; // if your function returns something other than void, add 'return
              // {};' at the end of it.
 }
 
@@ -135,70 +135,76 @@ bool rentACar(
 double calculateRectangleArea(double length, double width) 
 { 
     ignoreUnused(length, width); 
-    return length * width; 
+    return {}; 
 }  
 
 // 2) Function to calculate the volume of a box 
 double calculateBoxVolume(double length, double width, double height) 
 { 
     ignoreUnused(length, width, height); 
-    return length * width * height; 
+    return {}; 
 } 
 
-// 3) Function to convert Fahrenheit to Celsius 
-double fahrenheitToCelsius(double fahrenheit) 
+// 3) Function declaration to take a dog for a walk
+bool takeDogForWalk(int distanceInYards, bool isLeashed)
 { 
-    ignoreUnused(fahrenheit); 
-    return (fahrenheit - 32.0) * 5.0 / 9.0; 
-} 
+    ignoreUnused(distanceInYards, isLeashed); 
+    return {}; 
 
-// 4) Function to convert Celsius to Fahrenheit 
-double celsiusToFahrenheit(double celsius) 
+}  
+
+// 4) Function declaration to calculate total sales tax
+float calculateTotalSalesTax(float subtotal, float taxRate, float numItems)
 { 
-    ignoreUnused(celsius); 
-    return celsius * 9.0 / 5.0 + 32.0; 
+    ignoreUnused(subtotal, taxRate, numItems); 
+    return {};  
 }  
 
 // 5) Function to check if a number is even 
 bool isEven(int number) 
 { 
     ignoreUnused(number); 
-    return (number % 2) == 0; 
+    return {};  
 }  
 
 // 6) Function to check if a number is prime 
 bool isPrime(int number) 
 { 
     ignoreUnused(number); 
-    return false; // Placeholder implementation, actual implementation required
+    return {}; 
+
 }  
 
 // 7) Function to find the maximum of three numbers 
 int findMaximum(int num1, int num2, int num3) 
 { 
     ignoreUnused(num1, num2, num3); 
-    return std::max(std::max(num1, num2), num3); 
+     return {}; 
+
 }  
 
 // 8) Function to calculate the factorial of a number 
 int calculateFactorial(int number) 
 { 
     ignoreUnused(number); 
-    return 0; // Placeholder implementation, actual implementation required
+    return {}; 
+
 }  
 
 // 9) Function to convert miles per hour to kilometers per hour 
 float mphToKph(float mph) 
 { 
     ignoreUnused(mph); 
-    return mph * 1.60934f; 
+    return {}; 
+ 
 }  
 
 // 10) Function to find the minimum of two numbers 
 float findMinimum(float num1, float num2) 
 { 
     ignoreUnused(num1, num2); 
-    return std::min(num1, num2); 
+    return {}; 
+
 }
 
 
@@ -231,10 +237,10 @@ int main() {
     auto boxVolume = calculateBoxVolume(3.5, 2.0, 6.3);
 
     // 3)
-    auto celsiusValue = fahrenheitToCelsius(89.6);
+    bool walkWithTheDog = takeDogForWalk(100, true);
 
     // 4)
-    auto fahrenheitValue = celsiusToFahrenheit(37.0);
+    auto totalSalesTax = calculateTotalSalesTax(500.0f, 0.1f, 5.0f);
 
     // 5)
     auto isNumberEven = isEven(15);
@@ -257,17 +263,20 @@ int main() {
     
 
   
-    ignoreUnused(carRented);
-    ignoreUnused(rectangleArea);
-    ignoreUnused(boxVolume);
-    ignoreUnused(celsiusValue);
-    ignoreUnused(fahrenheitValue);
-    ignoreUnused(isNumberEven);
-    ignoreUnused(isNumberPrime);
-    ignoreUnused(maximumNumber);
-    ignoreUnused(factorialValue);
-    ignoreUnused(kphSpeed);
-    ignoreUnused(minimumNumber);
+    // ignoreUnused(carRented);
+    // ignoreUnused(rectangleArea);
+    // ignoreUnused(boxVolume);
+    // ignoreUnused(celsiusValue);
+    // ignoreUnused(fahrenheitValue);
+    // ignoreUnused(isNumberEven);
+    // ignoreUnused(isNumberPrime);
+    // ignoreUnused(maximumNumber);
+    // ignoreUnused(factorialValue);
+    // ignoreUnused(kphSpeed);
+    // ignoreUnused(minimumNumber);
+
+    ignoreUnused(carRented, rectangleArea, boxVolume, walkWithTheDog, totalSalesTax, isNumberEven, isNumberPrime, maximumNumber, factorialValue, kphSpeed, minimumNumber);
+
     
   std::cout << "good to go!" << std::endl;
   return 0;
