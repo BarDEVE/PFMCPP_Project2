@@ -131,75 +131,76 @@ bool rentACar(
              // {};' at the end of it.
 }
 
-/* 1) Function to calculate the area of a rectangle 
+// 1) Function to calculate the area of a rectangle 
 double calculateRectangleArea(double length, double width) 
 { 
     ignoreUnused(length, width); 
     return length * width; 
-}  */
+}  
 
-/* 2) Function to calculate the volume of a box 
+// 2) Function to calculate the volume of a box 
 double calculateBoxVolume(double length, double width, double height) 
 { 
     ignoreUnused(length, width, height); 
     return length * width * height; 
-} */
+} 
 
-/* 3) Function to convert Fahrenheit to Celsius 
+// 3) Function to convert Fahrenheit to Celsius 
 double fahrenheitToCelsius(double fahrenheit) 
 { 
     ignoreUnused(fahrenheit); 
     return (fahrenheit - 32.0) * 5.0 / 9.0; 
-} */
+} 
 
-/* 4) Function to convert Celsius to Fahrenheit 
+// 4) Function to convert Celsius to Fahrenheit 
 double celsiusToFahrenheit(double celsius) 
 { 
     ignoreUnused(celsius); 
     return celsius * 9.0 / 5.0 + 32.0; 
-}  */
+}  
 
-/* 5) Function to check if a number is even 
+// 5) Function to check if a number is even 
 bool isEven(int number) 
 { 
     ignoreUnused(number); 
     return (number % 2) == 0; 
-}  */
+}  
 
-/* 6) Function to check if a number is prime 
+// 6) Function to check if a number is prime 
 bool isPrime(int number) 
 { 
     ignoreUnused(number); 
     return false; // Placeholder implementation, actual implementation required
-}  */
+}  
 
-/* 7) Function to find the maximum of three numbers 
+// 7) Function to find the maximum of three numbers 
 int findMaximum(int num1, int num2, int num3) 
 { 
     ignoreUnused(num1, num2, num3); 
     return std::max(std::max(num1, num2), num3); 
-}  */
+}  
 
-/* 8) Function to calculate the factorial of a number 
+// 8) Function to calculate the factorial of a number 
 int calculateFactorial(int number) 
 { 
     ignoreUnused(number); 
     return 0; // Placeholder implementation, actual implementation required
-}  */
+}  
 
-/* 9) Function to convert miles per hour to kilometers per hour 
+// 9) Function to convert miles per hour to kilometers per hour 
 float mphToKph(float mph) 
 { 
     ignoreUnused(mph); 
     return mph * 1.60934f; 
-}  */
+}  
 
-/* 10) Function to find the minimum of two numbers 
+// 10) Function to find the minimum of two numbers 
 float findMinimum(float num1, float num2) 
 { 
     ignoreUnused(num1, num2); 
     return std::min(num1, num2); 
-} */
+}
+
 
 
 /*
@@ -223,27 +224,51 @@ int main() {
   // ignoreUnused at the end of main()
   auto carRented = rentACar(6, 2);
 
-  // 1)
+    // 1)
+    auto rectangleArea = calculateRectangleArea(4.2, 7.8);
 
-  // 2)
+    // 2)
+    auto boxVolume = calculateBoxVolume(3.5, 2.0, 6.3);
 
-  // 3)
+    // 3)
+    auto celsiusValue = fahrenheitToCelsius(89.6);
 
-  // 4)
+    // 4)
+    auto fahrenheitValue = celsiusToFahrenheit(37.0);
 
-  // 5)
+    // 5)
+    auto isNumberEven = isEven(15);
 
-  // 6)
+    // 6)
+    auto isNumberPrime = isPrime(23);
 
-  // 7)
+    // 7)
+    auto maximumNumber = findMaximum(10, 25, 18);
 
-  // 8)
+    // 8)
+    auto factorialValue = calculateFactorial(5);
 
-  // 9)
+    // 9)
+    auto kphSpeed = mphToKph(65.0);
 
-  // 10)
+    // 10)
+    auto minimumNumber = findMinimum(3.7f, 8.9f);
 
+    
+
+  
   ignoreUnused(carRented);
+    ignoreUnused(rectangleArea);
+    ignoreUnused(boxVolume);
+    ignoreUnused(celsiusValue);
+    ignoreUnused(fahrenheitValue);
+    ignoreUnused(isNumberEven);
+    ignoreUnused(isNumberPrime);
+    ignoreUnused(maximumNumber);
+    ignoreUnused(factorialValue);
+    ignoreUnused(kphSpeed);
+    ignoreUnused(minimumNumber);
+    
   std::cout << "good to go!" << std::endl;
   return 0;
 }
