@@ -71,9 +71,10 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
  */
 
 // 2)
-void variableDeclarations() {
+void variableDeclarations() 
+{
   // example:
-  //int number = 2; // declaration of a variable named "number", that uses the primitive
+    int number = 2; // declaration of a variable named "number", that uses the primitive
          // type 'int', and the variable's initial value is '2'
 
     // Integer type
@@ -97,22 +98,8 @@ void variableDeclarations() {
     bool isFlag = true;
 
 
-  // ignoreUnused(number); // passing each variable declared to the ignoreUnused() function
 
-  //   ignoreUnused(myInt);
-  //   ignoreUnused(anotherInt);
-  //   ignoreUnused(thirdInt);
-  //   ignoreUnused(myFloat);
-  //   ignoreUnused(anotherFloat);
-  //   ignoreUnused(thirdFloat);
-  //   ignoreUnused(myDouble);
-  //   ignoreUnused(anotherDouble);
-  //   ignoreUnused(thirdDouble);
-  //   ignoreUnused(isTrue);
-  //   ignoreUnused(isFalse);
-  //   ignoreUnused(isFlag);
-
-    ignoreUnused(myInt, anotherInt, thirdInt, myFloat, anotherFloat, thirdFloat, myDouble, anotherDouble, thirdDouble, isTrue, isFalse, isFlag);
+    ignoreUnused(number, myInt, anotherInt, thirdInt, myFloat, anotherFloat, thirdFloat, myDouble, anotherDouble, thirdDouble, isTrue, isFalse, isFlag);
     
 }
 
@@ -225,7 +212,8 @@ float findMinimum(float num1, float num2)
  Wait for my code review.
  */
 
-int main() {
+int main() 
+{
   // example of calling that function, storing the value, and passing it to
   // ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2);
@@ -259,21 +247,6 @@ int main() {
 
     // 10)
     auto minimumNumber = findMinimum(3.7f, 8.9f);
-
-    
-
-  
-    // ignoreUnused(carRented);
-    // ignoreUnused(rectangleArea);
-    // ignoreUnused(boxVolume);
-    // ignoreUnused(celsiusValue);
-    // ignoreUnused(fahrenheitValue);
-    // ignoreUnused(isNumberEven);
-    // ignoreUnused(isNumberPrime);
-    // ignoreUnused(maximumNumber);
-    // ignoreUnused(factorialValue);
-    // ignoreUnused(kphSpeed);
-    // ignoreUnused(minimumNumber);
 
     ignoreUnused(carRented, rectangleArea, boxVolume, walkWithTheDog, totalSalesTax, isNumberEven, isNumberPrime, maximumNumber, factorialValue, kphSpeed, minimumNumber);
 
